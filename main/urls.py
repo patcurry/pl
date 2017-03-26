@@ -16,6 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from pads import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^pad_list/',
+        views.pad_list,
+        name='pad_list'),
 ]
