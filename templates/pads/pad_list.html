@@ -1,3 +1,7 @@
+{% load staticfiles %}
 {% for pad in pad_list %}
-  {{ pad.name }}
+  <p>{{ pad.name }}</p>
+  <p>{{ pad.status }}</p>
 {% endfor %}
+
+<script src='{% static "js/pads/pad_list.js" %}'></script>
