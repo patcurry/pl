@@ -1,7 +1,18 @@
 {% load staticfiles %}
+
+<h1>Rent a Pad</h1>
+
+<p>Bla bla bla, whatever, we have this and that</p>
+
+<h2>Available Pads</h2>
 {% for pad in pad_list %}
-  <p>{{ pad.name }}</p>
-  <p>{{ pad.status }}</p>
+  {% if pad.status == 'available' %}
+    <p>{{ pad.name }}</p>
+  {% endif %}
 {% endfor %}
+
+
+
+
 
 <script src='{% static "js/pads/pad_list.js" %}'></script>
